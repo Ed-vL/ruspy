@@ -221,8 +221,9 @@ lit    : INT
 // "lit" no parser)
 
 // Tipos inteiros
-INT          : SIMPLE_INT | BIN_INT | OCT_INT | HEX_INT
-SIMPLE_INT   : /([0-9])+(_?)+([0-9]?)+(_?)+([0-9]?)+(_?)+([0-9]?)+(_?)+([0-9]?)+(_?)+([0-9]?)+(_?)+/
+INT          : RE_INT | BIN_INT | OCT_INT | HEX_INT | SIMPLE_INT
+RE_INT       : /([0-9])+(_?)+([0-9]?)+(_?)+([0-9]?)+(_?)+([0-9]?)+(_?)+([0-9]?)+(_?)+/
+SIMPLE_INT   : /0|1|42/
 BIN_INT      : /0b101010/ 
 OCT_INT      : /0o52/ 
 HEX_INT      : /0x2A/ 
